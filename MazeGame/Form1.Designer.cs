@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Finish = new System.Windows.Forms.Label();
+            this.finish = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -73,15 +73,15 @@
             this.player = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Finish
+            // finish
             // 
-            this.Finish.AutoSize = true;
-            this.Finish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Finish.Location = new System.Drawing.Point(445, 391);
-            this.Finish.Name = "Finish";
-            this.Finish.Size = new System.Drawing.Size(40, 13);
-            this.Finish.TabIndex = 177;
-            this.Finish.Text = "Finish";
+            this.finish.AutoSize = true;
+            this.finish.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finish.Location = new System.Drawing.Point(445, 391);
+            this.finish.Name = "finish";
+            this.finish.Size = new System.Drawing.Size(40, 13);
+            this.finish.TabIndex = 177;
+            this.finish.Text = "Finish";
             // 
             // label33
             // 
@@ -426,7 +426,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 493);
-            this.Controls.Add(this.Finish);
+            this.Controls.Add(this.finish);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label31);
@@ -478,7 +478,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Finish;
+        private System.Windows.Forms.Label finish;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;

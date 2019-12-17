@@ -51,6 +51,12 @@ namespace MazeGame
             {
                 GameOver();
             }
+
+            //If the player reaches the finish line
+            if (player.Bounds.IntersectsWith(finish.Bounds)) 
+            {
+                MessageBox.Show("Winner!");
+            }
         }
 
         private void GameOver()
