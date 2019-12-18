@@ -22,8 +22,6 @@ namespace MazeGame
             this.KeyDown += new KeyEventHandler(MainForm_KeyInput);
         }
 
-        public Label label { get; }
-
         public void MainForm_KeyInput(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left)
@@ -57,6 +55,10 @@ namespace MazeGame
             if (player.Bounds.IntersectsWith(finish.Bounds)) 
             {
                 MessageBox.Show("Winner!");
+
+                //Move the player back at the starting point
+                player.Location = new Point(40, 45);
+
             }
         }
 
