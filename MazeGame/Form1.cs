@@ -15,13 +15,14 @@ namespace MazeGame
         public Form1()
         {
             InitializeComponent();
-            player.Text = "J";
 
-            //Starting point of the arrow
+            //Player starting point
             player.Location = new Point(40, 45);
 
             this.KeyDown += new KeyEventHandler(MainForm_KeyInput);
         }
+
+        public Label label { get; }
 
         public void MainForm_KeyInput(object sender, KeyEventArgs e)
         {
@@ -45,7 +46,7 @@ namespace MazeGame
                 player.Location = new Point(player.Location.X, player.Location.Y + 5);
             }
 
-            //If the arrow touches the borders
+            //If the player touches the borders
             if (topBorder.Bounds.IntersectsWith(player.Bounds) || bottomBorder.Bounds.IntersectsWith(player.Bounds)
              || leftBorder.Bounds.IntersectsWith(player.Bounds) || rightBorder.Bounds.IntersectsWith(player.Bounds))
             {
@@ -63,7 +64,7 @@ namespace MazeGame
         {
             MessageBox.Show("Whoops! I'm going to have to take you back to the beginning");
 
-            //Move the arrow back at the starting point
+            //Move the player back at the starting point
             player.Location = new Point(40, 45);
         }
     }
