@@ -44,9 +44,8 @@ namespace MazeGame
                 player.Location = new Point(player.Location.X, player.Location.Y + 5);
             }
 
-            //If the player touches the borders
-            if (topBorder.Bounds.IntersectsWith(player.Bounds) || bottomBorder.Bounds.IntersectsWith(player.Bounds)
-             || leftBorder.Bounds.IntersectsWith(player.Bounds) || rightBorder.Bounds.IntersectsWith(player.Bounds))
+            //If the player touches any of the walls
+            if (collide() == true) 
             {
                 GameOver();
             }
@@ -58,8 +57,27 @@ namespace MazeGame
 
                 //Move the player back at the starting point
                 player.Location = new Point(40, 45);
-
             }
+        }
+
+        private bool collide()
+        {
+            Label[] walls = { topBorder, rightBorder, bottomBorder, leftBorder,
+                              label1, label2, label3, label4, label5, label6, label7, label8,
+                              label9, label10, label11, label12, label13, label14, label15, 
+                              label16, label17, label18, label19, label20, label21, label22,
+                              label23, label24, label25, label26, label27, label28, label29,
+                              label30, label31, label32, label33, label34, label35, label36,
+                              label37 };
+
+            for (int i = 0; i < walls.Length; i++) 
+            {
+                if (player.Bounds.IntersectsWith(walls[i].Bounds)) 
+                {                      
+                    return true;
+                }           
+            }
+            return false;
         }
 
         private void GameOver()
