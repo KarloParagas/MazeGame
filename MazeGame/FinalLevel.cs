@@ -22,7 +22,7 @@ namespace MazeGame
         {
             SoundPlayer player = new SoundPlayer();
 
-            player.SoundLocation = @"";
+            player.SoundLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\sound.wav";
 
             player.Play();
         }

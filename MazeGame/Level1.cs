@@ -45,10 +45,10 @@ namespace MazeGame
             }
 
             //If the player touches any of the walls
-            //if (collide() == true)
-            //{
-            //    BackToStart();
-            //}
+            if (collide() == true)
+            {
+                BackToStart();
+            }
 
             //If the player reaches the finish line
             if (player.Bounds.IntersectsWith(finish.Bounds)) 
