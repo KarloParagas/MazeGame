@@ -12,7 +12,7 @@ namespace MazeGame
 {
     public partial class Level2 : Form
     {
-        private int ticks = 120;
+        private int ticks = 90;
         private bool pathOpen = false;
 
         public Level2()
@@ -71,7 +71,7 @@ namespace MazeGame
                 //Removes the door to the finish line
                 Controls.Remove(label32);
                 
-                MessageBox.Show("A path opens...");
+                MessageBox.Show("A door opens...");
             }
 
             //If the player reaches the finish line
@@ -152,9 +152,9 @@ namespace MazeGame
                 //Move the player back at the starting point
                 player.Location = new Point(55, 561);
 
-                ticks = 120;
+                ticks = 90;
 
-                timer1.Start();
+                Close();
             }
         }
     }
