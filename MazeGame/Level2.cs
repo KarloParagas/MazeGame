@@ -50,10 +50,10 @@ namespace MazeGame
             }
 
             //If the player touches any of the walls
-            if (collide() == true)
-            {
-                BackToStart();
-            }
+            //if (collide() == true)
+            //{
+            //    BackToStart();
+            //}
 
             //If the player triggers any of the incorrect numbers
             if (wrongNumber() == true) 

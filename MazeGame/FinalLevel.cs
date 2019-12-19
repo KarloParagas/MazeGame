@@ -16,18 +16,17 @@ namespace MazeGame
         public FinalLevel()
         {
             InitializeComponent();
-            Scream();
-        }
-
-        private void FinalLevel_Load(object sender, EventArgs e)
-        {
-            Scream();
         }
 
         private static void Scream()
         {
-            SoundPlayer scream = new SoundPlayer("C:\\Users\\karlo\\Desktop\\ProjectsForFun\\MazeGame\\MazeGame\\Scream.wav");
+            SoundPlayer scream = new SoundPlayer(@"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\sound.wav");
             scream.Play();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Scream();
         }
     }
 }
