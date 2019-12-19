@@ -77,9 +77,6 @@ namespace MazeGame
             //If the player reaches the finish line
             if (player.Bounds.IntersectsWith(finish.Bounds))
             {
-                MessageBox.Show("I stand in the corner of a building and I never move but my children travel everywhere." +
-                                " What am I?");
-
                 //Activates the final level
                 var finalLevel = new FinalLevel();
                 finalLevel.Show();

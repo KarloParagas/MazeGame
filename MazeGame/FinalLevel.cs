@@ -13,18 +13,54 @@ namespace MazeGame
 {
     public partial class FinalLevel : Form
     {
+        private int ticks = 10;
+
         public FinalLevel()
         {
             InitializeComponent();
+
+            timer1.Start();
+
+            label1.Text = "The more of this there is, the less you see. What is it?";
         }
 
         private void FinalLevelBtn_Click(object sender, EventArgs e)
         {
-            SoundPlayer player = new SoundPlayer();
+            PlaySound();
+            DisplayImage();
+        }
 
-            player.SoundLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\sound.wav";
+        private void DisplayImage()
+        {
+            Controls.Remove(label1);
+            Controls.Remove(finalLevelBtn);
 
-            player.Play();
+            pictureBox1.ImageLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\SuccessImage.jpg";
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private static void PlaySound()
+        {
+            SoundPlayer sound = new SoundPlayer();
+
+            //Final level soundtrack composed by David RJ
+            sound.SoundLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\MajesticSound.wav";
+
+            sound.Play();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ticks--;
+
+            if (ticks == 0) 
+            {
+                timer1.Stop();
+
+                PlaySound();
+
+                DisplayImage();
+            }
         }
     }
 }
