@@ -12,7 +12,7 @@ namespace MazeGame
 {
     public partial class Level2 : Form
     {
-        private int ticks = 90;
+        private int ticks = 120;
         private bool pathOpen = false;
 
         public Level2()
