@@ -35,7 +35,7 @@ namespace MazeGame
             Controls.Remove(label1);
             Controls.Remove(finalLevelBtn);
 
-            pictureBox1.ImageLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\SuccessImage.jpg";
+            pictureBox1.ImageLocation = @"";
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
@@ -44,7 +44,7 @@ namespace MazeGame
             SoundPlayer sound = new SoundPlayer();
 
             //Final level soundtrack composed by David RJ
-            sound.SoundLocation = @"C:\Users\karlo\Desktop\ProjectsForFun\MazeGame\MazeGame\MajesticSound.wav";
+            sound.SoundLocation = @"";
 
             sound.Play();
         }
