@@ -44,7 +44,7 @@ namespace MazeGame
                 player.Location = new Point(player.Location.X, player.Location.Y + 5);
             }
 
-            //If the player touches any of the walls
+            ////If the player touches any of the walls
             if (collide() == true)
             {
                 BackToStart();
@@ -55,7 +55,7 @@ namespace MazeGame
             {
                 MessageBox.Show("I am holy, lucky, simple. Fibonacci, odd, and prime. In this riddle, you'll find me, " +
                                 "precisely nineteen times.");
-
+              
                 //Activates the next level
                 var level2 = new Level2();
                 level2.Show();

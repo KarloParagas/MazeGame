@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -13,7 +14,7 @@ namespace MazeGame
 {
     public partial class FinalLevel : Form
     {
-        private int ticks = 10;
+        private int ticks = 5;
 
         public FinalLevel()
         {
@@ -35,17 +36,13 @@ namespace MazeGame
             Controls.Remove(label1);
             Controls.Remove(finalLevelBtn);
 
-            pictureBox1.ImageLocation = @"";
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.BackgroundImage = Properties.Resources.SuccessImage;
         }
 
         private static void PlaySound()
         {
-            SoundPlayer sound = new SoundPlayer();
-
             //Final level soundtrack composed by David RJ
-            sound.SoundLocation = @"";
-
+            SoundPlayer sound = new SoundPlayer(Properties.Resources.MajesticSound);
             sound.Play();
         }
 
@@ -55,11 +52,13 @@ namespace MazeGame
 
             if (ticks == 0) 
             {
-                timer1.Stop();
+                finalLevelBtn.PerformClick();
+            }
 
-                PlaySound();
-
-                DisplayImage();
+            if (ticks == -3) 
+            {
+                MessageBox.Show("Thank you for playing :)");
+                Close();
             }
         }
     }
