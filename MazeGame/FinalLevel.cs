@@ -41,7 +41,6 @@ namespace MazeGame
 
         private static void PlaySound()
         {
-            //Final level soundtrack composed by David RJ
             SoundPlayer sound = new SoundPlayer(Properties.Resources.MajesticSound);
             sound.Play();
         }
